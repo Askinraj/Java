@@ -6,16 +6,23 @@ public class Pattern {
 			  { 
 				for(int col=1;col<=4-row;col++)
 				{
-					System.out.print(" ");
+					System.out.print("  ");
 				}
 				for(int star=1;star<=row;star++) {
-					System.out.print("*");
+					if(row==2&&star==2 || row==3&&star>=2)
+						System.out.print(" "+" ");
+					else
+						System.out.print("*"+" ");				
+					
 				}
 				for(int star=1;star<row;star++) {
-					System.out.print("*");
+					if(star==1&&row==3)
+						System.out.print(" "+" ");
+					else
+					System.out.print("*"+" ");
 				}
 		
-			   System.out.println(); 
+			   System.out.println(" "); 
 			  }        
 			
 			/*for(int row=0;row<=5;row++) {
